@@ -219,6 +219,7 @@
   {
     "type": "document",
     "named": true,
+    "root": true,
     "fields": {
       "body": {
         "multiple": false,
@@ -518,6 +519,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "link",
+    "named": false,
+    "fields": {}
   },
   {
     "type": "list",
@@ -1107,6 +1113,10 @@
     "named": false
   },
   {
+    "type": "[[",
+    "named": false
+  },
+  {
     "type": "[fn:",
     "named": false
   },
@@ -1136,6 +1146,10 @@
   },
   {
     "type": "]--[",
+    "named": false
+  },
+  {
+    "type": "]]",
     "named": false
   },
   {

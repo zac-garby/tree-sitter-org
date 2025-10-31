@@ -340,11 +340,22 @@ org_grammar = {
       repeat(expr('immediate', token.immediate, '>]'))
     ),
 
-    expr: $ => seq(
-      expr('non-immediate', token),
-      repeat(expr('immediate', token.immediate))
+    expr: $ => choice(
+        alias($.link, "link"),
+        seq(
+            expr('non-immediate', token),
+            repeat(expr('immediate', token.immediate))
+        ),
     ),
 
+    link: $ => seq(
+        "[[",
+        repeat1(seq(
+            expr('non-immediate', token),
+            repeat(expr('immediate', token.immediate))
+        )),
+        "]]",
+    )
   }
 };
 
