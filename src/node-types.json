@@ -521,11 +521,6 @@
     }
   },
   {
-    "type": "link",
-    "named": false,
-    "fields": {}
-  },
-  {
     "type": "list",
     "named": true,
     "fields": {
@@ -1113,10 +1108,6 @@
     "named": false
   },
   {
-    "type": "[[",
-    "named": false
-  },
-  {
     "type": "[fn:",
     "named": false
   },
@@ -1146,10 +1137,6 @@
   },
   {
     "type": "]--[",
-    "named": false
-  },
-  {
-    "type": "]]",
     "named": false
   },
   {
@@ -1187,6 +1174,10 @@
   {
     "type": "entry_name",
     "named": true
+  },
+  {
+    "type": "link",
+    "named": false
   },
   {
     "type": "name",

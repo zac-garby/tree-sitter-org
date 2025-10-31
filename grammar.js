@@ -341,20 +341,11 @@ org_grammar = {
     ),
 
     expr: $ => choice(
-        alias($.link, "link"),
-        seq(
-            expr('non-immediate', token),
-            repeat(expr('immediate', token.immediate))
-        ),
-    ),
-
-    link: $ => seq(
-        "[[",
-        repeat1(seq(
-            expr('non-immediate', token),
-            repeat(expr('immediate', token.immediate))
-        )),
-        "]]",
+      alias(token(prec("non-immediate", /\[\[[^\[\]]+\]\]/)), "link"),
+      seq(
+        expr('non-immediate', token),
+        repeat(expr('immediate', token.immediate))
+      ),
     )
   }
 };
