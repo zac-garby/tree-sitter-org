@@ -364,7 +364,21 @@
   {
     "type": "expr",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "link",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "fndef",
@@ -518,6 +532,22 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "link",
+    "named": true,
+    "fields": {
+      "uri": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "uri",
+            "named": false
+          }
+        ]
+      }
     }
   },
   {
@@ -960,6 +990,11 @@
     }
   },
   {
+    "type": "word",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "\n",
     "named": false
   },
@@ -1108,6 +1143,10 @@
     "named": false
   },
   {
+    "type": "[[",
+    "named": false
+  },
+  {
     "type": "[fn:",
     "named": false
   },
@@ -1137,6 +1176,10 @@
   },
   {
     "type": "]--[",
+    "named": false
+  },
+  {
+    "type": "]]",
     "named": false
   },
   {
@@ -1176,32 +1219,24 @@
     "named": true
   },
   {
-    "type": "link",
-    "named": false
-  },
-  {
     "type": "name",
     "named": true
-  },
-  {
-    "type": "num",
-    "named": false
   },
   {
     "type": "repeat",
     "named": true
   },
   {
-    "type": "str",
-    "named": false
-  },
-  {
-    "type": "sym",
-    "named": false
-  },
-  {
     "type": "time",
     "named": true
+  },
+  {
+    "type": "uri",
+    "named": false
+  },
+  {
+    "type": "word",
+    "named": false
   },
   {
     "type": "{",

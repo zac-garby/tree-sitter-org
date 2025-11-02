@@ -36,7 +36,7 @@ org_grammar = {
     // Should we start the tag?
     [$.item],
 
-    [$._tag_expr_start, $.expr],
+    [$._tag_expr_start, $.word],
 
     // _multiline_text  •  ':'  …
     // Is the ':' continued multiline text or is it a drawer?
@@ -44,10 +44,10 @@ org_grammar = {
     [$.fndef],
     // ':'  'str'  …
     // Continue the conflict from above
-    [$.expr, $.drawer],
+    [$.word, $.drawer],
 
     // headline  'entry_token1'  ':'  •  '<'  …
-    [$.entry, $.expr],
+    [$.entry, $.word],
 
   ],
 
@@ -341,12 +341,22 @@ org_grammar = {
     ),
 
     expr: $ => choice(
-      alias(token(prec("non-immediate", /\[\[[^\[\]]+\]\]/)), "link"),
-      seq(
-        expr('non-immediate', token),
-        repeat(expr('immediate', token.immediate))
-      ),
-    )
+      $.link,
+      $.word,
+    ),
+
+    link: $ => seq(
+      "[[",
+      field("uri", $._link_uri),
+      "]]"
+    ),
+
+    _link_uri: $ => alias(token(/[^\]\n\r]+/), "uri"),
+
+    word: $ => alias(seq(
+      expr('non-immediate', token),
+      repeat(expr('immediate', token.immediate))
+    ), "word"),
   }
 };
 
@@ -354,12 +364,9 @@ function expr(pr, tfunc, skip = '') {
   skip = skip.split("")
   return choice(
     ...asciiSymbols.filter(c => !skip.includes(c)).map(c => tfunc(prec(pr, c))),
-    alias(tfunc(prec(pr, /\p{L}+/)), 'str'),
-    alias(tfunc(prec(pr, /\p{N}+/)), 'num'),
-    alias(tfunc(prec(pr, /[^\p{Z}\p{L}\p{N}\t\n\r]/)), 'sym'),
-     // for checkboxes: ugly, but makes them work..
-    // alias(tfunc(prec(pr, 'x')), 'str'),
-    // alias(tfunc(prec(pr, 'X')), 'str'),
+    tfunc(prec(pr, /\p{L}+/)),
+    tfunc(prec(pr, /\p{N}+/)),
+    tfunc(prec(pr, /[^\p{Z}\p{L}\p{N}\t\n\r]/)),
   )
 }
 
