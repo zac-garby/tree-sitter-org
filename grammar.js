@@ -353,10 +353,10 @@ org_grammar = {
 
     _link_uri: $ => alias(token(/[^\]\n\r]+/), "uri"),
 
-    word: $ => alias(seq(
+    word: $ => seq(
       expr('non-immediate', token),
       repeat(expr('immediate', token.immediate))
-    ), "word"),
+    ),
   }
 };
 
