@@ -372,10 +372,6 @@
         {
           "type": "link",
           "named": true
-        },
-        {
-          "type": "word",
-          "named": true
         }
       ]
     }
@@ -988,11 +984,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "word",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "\n",

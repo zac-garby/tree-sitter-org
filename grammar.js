@@ -36,7 +36,7 @@ org_grammar = {
     // Should we start the tag?
     [$.item],
 
-    [$._tag_expr_start, $.word],
+    [$._tag_expr_start, $.expr],
 
     // _multiline_text  •  ':'  …
     // Is the ':' continued multiline text or is it a drawer?
@@ -44,11 +44,10 @@ org_grammar = {
     [$.fndef],
     // ':'  'str'  …
     // Continue the conflict from above
-    [$.word, $.drawer],
+    [$.expr, $.drawer],
 
     // headline  'entry_token1'  ':'  •  '<'  …
-    [$.entry, $.word],
-
+    [$.entry, $.expr],
   ],
 
   rules: {
@@ -342,7 +341,10 @@ org_grammar = {
 
     expr: $ => choice(
       $.link,
-      $.word,
+      seq(
+        expr('non-immediate', token),
+        repeat(expr('immediate', token.immediate))
+      ),
     ),
 
     link: $ => seq(
@@ -352,11 +354,6 @@ org_grammar = {
     ),
 
     _link_uri: $ => alias(token(/[^\]\n\r]+/), "uri"),
-
-    word: $ => seq(
-      expr('non-immediate', token),
-      repeat(expr('immediate', token.immediate))
-    ),
   }
 };
 
