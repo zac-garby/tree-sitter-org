@@ -364,9 +364,9 @@ function expr(pr, tfunc, skip = '') {
   skip = skip.split("")
   return choice(
     ...asciiSymbols.filter(c => !skip.includes(c)).map(c => tfunc(prec(pr, c))),
-    tfunc(prec(pr, /\p{L}+/)),
-    tfunc(prec(pr, /\p{N}+/)),
-    tfunc(prec(pr, /[^\p{Z}\p{L}\p{N}\t\n\r]/)),
+    alias(tfunc(prec(pr, /\p{L}+/)), "str"),
+    alias(tfunc(prec(pr, /\p{N}+/)), "num"),
+    alias(tfunc(prec(pr, /[^\p{Z}\p{L}\p{N}\t\n\r]/)), "sym"),
   )
 }
 

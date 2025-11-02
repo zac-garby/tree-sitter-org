@@ -1223,8 +1223,20 @@
     "named": true
   },
   {
+    "type": "num",
+    "named": false
+  },
+  {
     "type": "repeat",
     "named": true
+  },
+  {
+    "type": "str",
+    "named": false
+  },
+  {
+    "type": "sym",
+    "named": false
   },
   {
     "type": "time",

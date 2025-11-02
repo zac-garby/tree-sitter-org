@@ -2402,37 +2402,52 @@
             }
           },
           {
-            "type": "IMMEDIATE_TOKEN",
+            "type": "ALIAS",
             "content": {
-              "type": "PREC",
-              "value": "immediate",
+              "type": "IMMEDIATE_TOKEN",
               "content": {
-                "type": "PATTERN",
-                "value": "\\p{L}+"
+                "type": "PREC",
+                "value": "immediate",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "\\p{L}+"
+                }
               }
-            }
+            },
+            "named": false,
+            "value": "str"
           },
           {
-            "type": "IMMEDIATE_TOKEN",
+            "type": "ALIAS",
             "content": {
-              "type": "PREC",
-              "value": "immediate",
+              "type": "IMMEDIATE_TOKEN",
               "content": {
-                "type": "PATTERN",
-                "value": "\\p{N}+"
+                "type": "PREC",
+                "value": "immediate",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "\\p{N}+"
+                }
               }
-            }
+            },
+            "named": false,
+            "value": "num"
           },
           {
-            "type": "IMMEDIATE_TOKEN",
+            "type": "ALIAS",
             "content": {
-              "type": "PREC",
-              "value": "immediate",
+              "type": "IMMEDIATE_TOKEN",
               "content": {
-                "type": "PATTERN",
-                "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                "type": "PREC",
+                "value": "immediate",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                }
               }
-            }
+            },
+            "named": false,
+            "value": "sym"
           }
         ]
       }
@@ -2784,37 +2799,52 @@
             }
           },
           {
-            "type": "IMMEDIATE_TOKEN",
+            "type": "ALIAS",
             "content": {
-              "type": "PREC",
-              "value": "immediate",
+              "type": "IMMEDIATE_TOKEN",
               "content": {
-                "type": "PATTERN",
-                "value": "\\p{L}+"
+                "type": "PREC",
+                "value": "immediate",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "\\p{L}+"
+                }
               }
-            }
+            },
+            "named": false,
+            "value": "str"
           },
           {
-            "type": "IMMEDIATE_TOKEN",
+            "type": "ALIAS",
             "content": {
-              "type": "PREC",
-              "value": "immediate",
+              "type": "IMMEDIATE_TOKEN",
               "content": {
-                "type": "PATTERN",
-                "value": "\\p{N}+"
+                "type": "PREC",
+                "value": "immediate",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "\\p{N}+"
+                }
               }
-            }
+            },
+            "named": false,
+            "value": "num"
           },
           {
-            "type": "IMMEDIATE_TOKEN",
+            "type": "ALIAS",
             "content": {
-              "type": "PREC",
-              "value": "immediate",
+              "type": "IMMEDIATE_TOKEN",
               "content": {
-                "type": "PATTERN",
-                "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                "type": "PREC",
+                "value": "immediate",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                }
               }
-            }
+            },
+            "named": false,
+            "value": "sym"
           }
         ]
       }
@@ -3164,37 +3194,52 @@
           }
         },
         {
-          "type": "IMMEDIATE_TOKEN",
+          "type": "ALIAS",
           "content": {
-            "type": "PREC",
-            "value": "immediate",
+            "type": "IMMEDIATE_TOKEN",
             "content": {
-              "type": "PATTERN",
-              "value": "\\p{L}+"
+              "type": "PREC",
+              "value": "immediate",
+              "content": {
+                "type": "PATTERN",
+                "value": "\\p{L}+"
+              }
             }
-          }
+          },
+          "named": false,
+          "value": "str"
         },
         {
-          "type": "IMMEDIATE_TOKEN",
+          "type": "ALIAS",
           "content": {
-            "type": "PREC",
-            "value": "immediate",
+            "type": "IMMEDIATE_TOKEN",
             "content": {
-              "type": "PATTERN",
-              "value": "\\p{N}+"
+              "type": "PREC",
+              "value": "immediate",
+              "content": {
+                "type": "PATTERN",
+                "value": "\\p{N}+"
+              }
             }
-          }
+          },
+          "named": false,
+          "value": "num"
         },
         {
-          "type": "IMMEDIATE_TOKEN",
+          "type": "ALIAS",
           "content": {
-            "type": "PREC",
-            "value": "immediate",
+            "type": "IMMEDIATE_TOKEN",
             "content": {
-              "type": "PATTERN",
-              "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+              "type": "PREC",
+              "value": "immediate",
+              "content": {
+                "type": "PATTERN",
+                "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+              }
             }
-          }
+          },
+          "named": false,
+          "value": "sym"
         }
       ]
     },
@@ -3535,37 +3580,52 @@
               }
             },
             {
-              "type": "TOKEN",
+              "type": "ALIAS",
               "content": {
-                "type": "PREC",
-                "value": "non-immediate",
+                "type": "TOKEN",
                 "content": {
-                  "type": "PATTERN",
-                  "value": "\\p{L}+"
+                  "type": "PREC",
+                  "value": "non-immediate",
+                  "content": {
+                    "type": "PATTERN",
+                    "value": "\\p{L}+"
+                  }
                 }
-              }
+              },
+              "named": false,
+              "value": "str"
             },
             {
-              "type": "TOKEN",
+              "type": "ALIAS",
               "content": {
-                "type": "PREC",
-                "value": "non-immediate",
+                "type": "TOKEN",
                 "content": {
-                  "type": "PATTERN",
-                  "value": "\\p{N}+"
+                  "type": "PREC",
+                  "value": "non-immediate",
+                  "content": {
+                    "type": "PATTERN",
+                    "value": "\\p{N}+"
+                  }
                 }
-              }
+              },
+              "named": false,
+              "value": "num"
             },
             {
-              "type": "TOKEN",
+              "type": "ALIAS",
               "content": {
-                "type": "PREC",
-                "value": "non-immediate",
+                "type": "TOKEN",
                 "content": {
-                  "type": "PATTERN",
-                  "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                  "type": "PREC",
+                  "value": "non-immediate",
+                  "content": {
+                    "type": "PATTERN",
+                    "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                  }
                 }
-              }
+              },
+              "named": false,
+              "value": "sym"
             }
           ]
         },
@@ -3905,37 +3965,52 @@
                 }
               },
               {
-                "type": "IMMEDIATE_TOKEN",
+                "type": "ALIAS",
                 "content": {
-                  "type": "PREC",
-                  "value": "immediate",
+                  "type": "IMMEDIATE_TOKEN",
                   "content": {
-                    "type": "PATTERN",
-                    "value": "\\p{L}+"
+                    "type": "PREC",
+                    "value": "immediate",
+                    "content": {
+                      "type": "PATTERN",
+                      "value": "\\p{L}+"
+                    }
                   }
-                }
+                },
+                "named": false,
+                "value": "str"
               },
               {
-                "type": "IMMEDIATE_TOKEN",
+                "type": "ALIAS",
                 "content": {
-                  "type": "PREC",
-                  "value": "immediate",
+                  "type": "IMMEDIATE_TOKEN",
                   "content": {
-                    "type": "PATTERN",
-                    "value": "\\p{N}+"
+                    "type": "PREC",
+                    "value": "immediate",
+                    "content": {
+                      "type": "PATTERN",
+                      "value": "\\p{N}+"
+                    }
                   }
-                }
+                },
+                "named": false,
+                "value": "num"
               },
               {
-                "type": "IMMEDIATE_TOKEN",
+                "type": "ALIAS",
                 "content": {
-                  "type": "PREC",
-                  "value": "immediate",
+                  "type": "IMMEDIATE_TOKEN",
                   "content": {
-                    "type": "PATTERN",
-                    "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                    "type": "PREC",
+                    "value": "immediate",
+                    "content": {
+                      "type": "PATTERN",
+                      "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                    }
                   }
-                }
+                },
+                "named": false,
+                "value": "sym"
               }
             ]
           }
@@ -4349,37 +4424,52 @@
                 }
               },
               {
-                "type": "TOKEN",
+                "type": "ALIAS",
                 "content": {
-                  "type": "PREC",
-                  "value": "non-immediate",
+                  "type": "TOKEN",
                   "content": {
-                    "type": "PATTERN",
-                    "value": "\\p{L}+"
+                    "type": "PREC",
+                    "value": "non-immediate",
+                    "content": {
+                      "type": "PATTERN",
+                      "value": "\\p{L}+"
+                    }
                   }
-                }
+                },
+                "named": false,
+                "value": "str"
               },
               {
-                "type": "TOKEN",
+                "type": "ALIAS",
                 "content": {
-                  "type": "PREC",
-                  "value": "non-immediate",
+                  "type": "TOKEN",
                   "content": {
-                    "type": "PATTERN",
-                    "value": "\\p{N}+"
+                    "type": "PREC",
+                    "value": "non-immediate",
+                    "content": {
+                      "type": "PATTERN",
+                      "value": "\\p{N}+"
+                    }
                   }
-                }
+                },
+                "named": false,
+                "value": "num"
               },
               {
-                "type": "TOKEN",
+                "type": "ALIAS",
                 "content": {
-                  "type": "PREC",
-                  "value": "non-immediate",
+                  "type": "TOKEN",
                   "content": {
-                    "type": "PATTERN",
-                    "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                    "type": "PREC",
+                    "value": "non-immediate",
+                    "content": {
+                      "type": "PATTERN",
+                      "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                    }
                   }
-                }
+                },
+                "named": false,
+                "value": "sym"
               }
             ]
           },
@@ -4741,37 +4831,52 @@
                   }
                 },
                 {
-                  "type": "IMMEDIATE_TOKEN",
+                  "type": "ALIAS",
                   "content": {
-                    "type": "PREC",
-                    "value": "immediate",
+                    "type": "IMMEDIATE_TOKEN",
                     "content": {
-                      "type": "PATTERN",
-                      "value": "\\p{L}+"
+                      "type": "PREC",
+                      "value": "immediate",
+                      "content": {
+                        "type": "PATTERN",
+                        "value": "\\p{L}+"
+                      }
                     }
-                  }
+                  },
+                  "named": false,
+                  "value": "str"
                 },
                 {
-                  "type": "IMMEDIATE_TOKEN",
+                  "type": "ALIAS",
                   "content": {
-                    "type": "PREC",
-                    "value": "immediate",
+                    "type": "IMMEDIATE_TOKEN",
                     "content": {
-                      "type": "PATTERN",
-                      "value": "\\p{N}+"
+                      "type": "PREC",
+                      "value": "immediate",
+                      "content": {
+                        "type": "PATTERN",
+                        "value": "\\p{N}+"
+                      }
                     }
-                  }
+                  },
+                  "named": false,
+                  "value": "num"
                 },
                 {
-                  "type": "IMMEDIATE_TOKEN",
+                  "type": "ALIAS",
                   "content": {
-                    "type": "PREC",
-                    "value": "immediate",
+                    "type": "IMMEDIATE_TOKEN",
                     "content": {
-                      "type": "PATTERN",
-                      "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                      "type": "PREC",
+                      "value": "immediate",
+                      "content": {
+                        "type": "PATTERN",
+                        "value": "[^\\p{Z}\\p{L}\\p{N}\\t\\n\\r]"
+                      }
                     }
-                  }
+                  },
+                  "named": false,
+                  "value": "sym"
                 }
               ]
             }
