@@ -534,6 +534,16 @@
     "type": "link",
     "named": true,
     "fields": {
+      "description": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "description",
+            "named": false
+          }
+        ]
+      },
       "uri": {
         "multiple": false,
         "required": true,
@@ -1167,6 +1177,10 @@
   },
   {
     "type": "]--[",
+    "named": false
+  },
+  {
+    "type": "][",
     "named": false
   },
   {

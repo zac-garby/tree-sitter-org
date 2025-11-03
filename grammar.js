@@ -2,8 +2,6 @@ asciiSymbols = [ '!', '"', '#', '$', '%', '&', "'", '(', ')', '*',
   '+', ',', '-', '.', '/',  ':', ';', '<', '=', '>', '?', '@', '[', ']',
   '\\', '^', '_', '`', '{', '|', '}', '~' ]
 
-linkSymbols = [ "(", ")", "_", "-" ]
-
 org_grammar = {
   name: 'org',
   // Treat newlines explicitly, all other whitespace is extra
@@ -352,13 +350,19 @@ org_grammar = {
     link: $ => seq(
       "[[",
       field("uri", $._link_uri),
+      optional(seq(
+        "][",
+        field("description", $._link_desc)
+      )),
       "]]"
     ),
 
     _link_uri: $ => alias(token(repeat1(choice(
-      ...linkSymbols,
-      /[\p{L}\p{N} ]+/,
+      /[^\]]+/,
+      "\\]",
     ))), "uri"),
+
+    _link_desc: $ => alias(repeat1($.expr), "description"),
   }
 };
 
